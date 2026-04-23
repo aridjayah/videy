@@ -1,0 +1,184 @@
+body {
+  background: #f2f3f5;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER ----------------------------- */
+.header {
+  background: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 22px;
+  margin-left: 12px;
+  cursor: pointer;
+  color: #333;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* WRAP -------------------------------- */
+.wrap {
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+/* POST BLOCK -------------------------- */
+.post-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  border: 1px solid #e3e3e3;
+  transition: 0.2s ease;
+}
+
+.post-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* AVATAR ------------------------------ */
+.head-avatar__logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.verified-icon i {
+  color: #1877f2;
+}
+
+.blue-text {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.grey-text {
+  font-size: 13px;
+  color: #6f6f6f;
+}
+
+/* IMAGE AREA --------------------------- */
+.post-block__img {
+  position: relative;
+}
+
+.post-block__img1 {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.live-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.post-block__img-play {
+  position: absolute;
+  width: 60px;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.9;
+}
+
+/* LIKE DATA --------------------------- */
+.post-block__like-data img {
+  vertical-align: middle;
+}
+
+.post-block__like-data span {
+  font-size: 16px;
+}
+
+/* ACTIONS ------------------------------ */
+.post-block__actions div {
+  cursor: pointer;
+  padding: 10px 0;
+  color: #444;
+  font-weight: 500;
+}
+
+.post-block__actions div:hover {
+  color: #1877f2;
+}
+
+.post-loading {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #777;
+}
+
+.lazy-img {
+  filter: blur(6px);
+  transition: 0.3s ease-in-out;
+}
+.lazy-img.loaded {
+  filter: blur(0px);
+}
+
+.post-block__img {
+  position: relative;
+  overflow: hidden;
+}
+
+/* SPINNER: defaultnya tidak terlihat */
+.post-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  border: 5px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Saat hover → spinner muncul + gambar gelap */
+.post-block__img:hover .post-spinner {
+  opacity: 1;
+}
+
+.post-block__img:hover img {
+  filter: brightness(0.5);
+}
+
+
